@@ -14,17 +14,21 @@ class Solution {
         var secondSum = 0;
         var row = a.Length - 1;
         var arrayLength = a.Length;
+        var column = 0;
         
         for (var i = 0; i < arrayLength; i++)
         {
             firstSum += a[i][i];
-        }
-        
-        for (var column = 0; column < arrayLength; column++)
-        {
             secondSum += a[row][column];
+            column++;
             row--;
         }
+        
+        // for (var column = 0; column < arrayLength; column++)
+        // {
+        //     secondSum += a[row][column];
+        //     row--;
+        // }
         
         return Math.Abs(firstSum - secondSum);
     }

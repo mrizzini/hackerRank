@@ -47,6 +47,25 @@ class Solution {
         
         Console.WriteLine(appleCounter);                          
         Console.WriteLine(orangeCounter);
+        
+        
+        var applecounter = 0;
+        var orangecounter = 0;
+    
+        oranges.forEach(function(orange){
+            if (b + (orange) >= s && b + (orange) <= t ) {
+                orangecounter++;
+            }
+        });
+    
+        apples.forEach(function(apple){
+            if (a + (apple) >= s && a + (apple) <= t ) {
+                applecounter++;     
+            }
+            });
+    
+        console.log(applecounter);
+        console.log(orangecounter);
     }
 
     static void Main(string[] args) {
